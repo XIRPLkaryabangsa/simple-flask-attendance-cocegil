@@ -27,7 +27,7 @@ def get_absensi():
 @app.route('/absensi/add', methods=['GET', 'POST'])
 def add_absensi():
     if request.method == 'POST':
-        status = request.form['status']  # Capture the status from the dropdown
+        status = request.form['status']  # Capture the statuss from the dropdown
         nama = request.form['nama']
         tanggal_str = request.form['tanggal']
         tanggal_obj = datetime.strptime(tanggal_str, '%Y-%m-%d').date()
