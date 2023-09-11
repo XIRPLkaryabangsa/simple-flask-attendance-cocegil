@@ -18,11 +18,8 @@ class Absensi(db.Model):
         self.tanggal = tanggal
         self.status = status  # Initialize status
 
+
 @app.route('/', methods=['GET'])
-def index():
-    return render_template('index.html')
-        
-@app.route('/absensi', methods=['GET'])
 def get_absensi():
     records = Absensi.query.all()
     return render_template('list_absensi.html', records=records)
@@ -30,7 +27,7 @@ def get_absensi():
 @app.route('/absensi/add', methods=['GET', 'POST'])
 def add_absensi():
     if request.method == 'POST':
-        status = request.form['status']  # Capture the status from the dropdown
+        status = request.form['status']  # Capture the statuss from the dropdown
         nama = request.form['nama']
         tanggal_str = request.form['tanggal']
         tanggal_obj = datetime.strptime(tanggal_str, '%Y-%m-%d').date()

@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 {% block title %}Attendance Records{% endblock %}
 {% block content %}
+<body background-color="#C0C0C0">
     <h1>Attendance Records</h1>
-    <a href="/absensi/add" class="btn btn-primary mb-3">Add New Record</a>
+    
+    <div class="alert alert-info" role="alert">
+        selamat datang di absensi siswa/siswi kelas XI RPL :)
+    </div>
+
+
+
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Date</th>
+                <th>Tanggal</th>
                 <th>Status</th>
-                <th>Actions</th>
+                <th>pengaturan</th>
             </tr>
         </thead>
         <tbody>
@@ -21,11 +28,11 @@
                 <td>{{ record.tanggal }}</td>
                 <td>{{ record.status }}</td>
                 <td>
-                    <a href="/absensi/update/{{ record.id }}" class="btn btn-info">Edit</a>
-                    <a href="/absensi/delete/{{ record.id }}" class="btn btn-danger">Delete</a>
+                    <a href="/absensi/delete/{{ record.id }}" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+</body>
 {% endblock %}
