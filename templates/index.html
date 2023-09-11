@@ -5,4 +5,9 @@
     <p>
         <a href="/absensi">View Attendance Records</a>
     </p>
+
+    <td>
+        <a href="/absensi/update/{{ record.id }}" class="btn btn-info">Edit</a>
+        <a href="/absensi/delete/{{ record.id }}" class="btn btn-danger">Hapus</a>
+    </td>
 {% endblock %}
