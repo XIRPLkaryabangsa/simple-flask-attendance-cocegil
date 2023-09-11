@@ -18,11 +18,8 @@ class Absensi(db.Model):
         self.tanggal = tanggal
         self.status = status  # Initialize status
 
+
 @app.route('/', methods=['GET'])
-def index():
-    return render_template('index.html')
-        
-@app.route('/absensi', methods=['GET'])
 def get_absensi():
     records = Absensi.query.all()
     return render_template('list_absensi.html', records=records)
