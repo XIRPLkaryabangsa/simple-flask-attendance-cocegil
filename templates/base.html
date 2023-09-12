@@ -5,6 +5,7 @@
     <title>{% block title %}Attendance System{% endblock %}</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='js/buttn.js')}}"
 </head>
 <body>
 
@@ -33,6 +34,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    const triggers = [
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'light',
+    'dark',
+  ];
+  const basicInstances = [
+    'alert-primary',
+    'alert-secondary',
+    'alert-success',
+    'alert-danger',
+    'alert-warning',
+    'alert-info',
+    'alert-light',
+    'alert-dark',
+  ];
+  
+  triggers.forEach((trigger, index) => {
+    let basicInstance = mdb.Alert.getInstance(document.getElementById(basicInstances[index]));
+    document.getElementById(trigger).addEventListener('click', () => {
+      basicInstance.show();
+    });
+  });
+</script>
 
 </body>
 </html>
