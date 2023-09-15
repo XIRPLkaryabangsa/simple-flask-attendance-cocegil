@@ -2,7 +2,7 @@
 {% block title %}Attendance Records{% endblock %}
 {% block content %}
 
-    <h1>Attendance Records</h1>
+    <center><h1><b>Absensi kelas XI RPL</b></h1></center>
     
     <div class="alert alert-info" role="alert">
         selamat datang di absensi siswa/siswi kelas XI RPL :D
@@ -32,54 +32,9 @@
             {% endfor %}
         </tbody>
     </table>
+</div>
 
-    
-    <button type="button" id="success" class="btn btn-success m-1">Success</button>
-    
-    <div
-        class="alert fade"
-        id="alert-success"
-        role="alert"
-        data-mdb-color="success"
-        data-mdb-position="top-right"
-        data-mdb-stacking="true"
-        data-mdb-width="535px"
-        data-mdb-width="535px"
-        data-mdb-append-to-body="true"
-        data-mdb-hidden="true"
-        data-mdb-autohide="true"
-        data-mdb-delay="2000">
-  
-        <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-  </div>
-<script>
 
-const triggers = [
-  'primary',
-  'secondary',
-  'success',
-  'danger',
-  'warning',
-  'info',
-  'light',
-  'dark',
-];
-const basicInstances = [
-  'alert-primary',
-  'alert-secondary',
-  'alert-success',
-  'alert-danger',
-  'alert-warning',
-  'alert-info',
-  'alert-light',
-  'alert-dark',
-];
 
-triggers.forEach((trigger, index) => {
-  let basicInstance = mdb.Alert.getInstance(document.getElementById(basicInstances[index]));
-  document.getElementById(trigger).addEventListener('click', () => {
-    basicInstance.show();
-  });
-});
-</script>
+
 {% endblock %}

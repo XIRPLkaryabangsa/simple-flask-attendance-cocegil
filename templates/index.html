@@ -10,4 +10,54 @@
         <a href="/absensi/update/{{ record.id }}" class="btn btn-info">Edit</a>
         <a href="/absensi/delete/{{ record.id }}" class="btn btn-danger">Hapus</a>
     </td>
+
+    <button type="button" id="success" class="btn btn-success m-1">Success</button>
+    
+    <div
+        class="alert fade"
+        id="alert-success"
+        role="alert"
+        data-mdb-color="success"
+        data-mdb-position="top-right"
+        data-mdb-stacking="true"
+        data-mdb-width="535px"
+        data-mdb-width="535px"
+        data-mdb-append-to-body="true"
+        data-mdb-hidden="true"
+        data-mdb-autohide="true"
+        data-mdb-delay="2000">
+  
+        <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  </div>
+   
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Open modal
+  </button>
+
+  
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
 {% endblock %}
