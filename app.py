@@ -24,6 +24,11 @@ def get_absensi():
     records = Absensi.query.all()
     return render_template('list_absensi.html', records=records)
 
+@app.route('/absensi/e', methods=['GET'])
+def get_absensi_e():
+    records = Absensi.query.all()
+    return render_template('list_absensi_2.html', records=records)
+
 @app.route('/absensi/add', methods=['GET', 'POST'])
 def add_absensi():
     if request.method == 'POST':

@@ -15,7 +15,6 @@
                 <th>Name</th>
                 <th>Tanggal</th>
                 <th>Status</th>
-                <th>pengaturan</th>
             </tr>
         </thead>
         <tbody>
@@ -25,10 +24,6 @@
                 <td>{{ record.nama }}</td>
                 <td>{{ record.tanggal }}</td>
                 <td>{{ record.status }}</td>
-                <td>
-                  <a href="/absensi/update/{{ record.id }}" class="btn btn-info">Edit</a>
-                  <a href="/absensi/delete/{{ record.id }}" class="btn btn-danger">Hapus</a>
-              </td>
             </tr>
             {% endfor %}
         </tbody>
